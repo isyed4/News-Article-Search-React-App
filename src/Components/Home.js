@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Home = () => {
+const Home = (props) => {
 
     const [searchTopic, setSearchTopic] = useState('')
     const [searchDate, setSearchDate] = useState('')
@@ -26,6 +26,8 @@ const Home = () => {
 
     }
 
+   
+
     const articleArr = articles.map((item)=>{
         return(
             <>
@@ -35,10 +37,12 @@ const Home = () => {
             <li>{item.description}</li>
             <li>{item.url}</li>
             <br />
-            <button>Add to List</button>
+            <button onClick={()=> props.addNewListItem(articles)}>Add to List</button>
             </>
         )
     })
+
+   
 
 
     return(

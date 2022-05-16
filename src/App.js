@@ -4,8 +4,24 @@ import Home from './Components/Home';
 import ReadingList from './Components/ReadingList';
 import About from './Components/About';
 import { Routes, Route, Link } from "react-router-dom";
+import { useState } from 'react';
 
 function App() {
+
+  const [readingList, setReadingList] = useState([])
+
+  const addNewListItem = (article) => {
+    let copy = [...readingList]
+
+    copy.push(article)
+
+    setReadingList(copy)
+
+    console.log(readingList);
+
+  }
+
+
   return (
     <div className="App">
 
@@ -32,8 +48,8 @@ function App() {
 
       <main>
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/readinglist' element={<ReadingList/>} />
+          <Route path='/' element={<Home  addNewListItem={addNewListItem}/>} />
+          <Route path='/readinglist' element={<ReadingList readingList={readingList}/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
 
