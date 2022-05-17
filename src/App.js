@@ -3,6 +3,8 @@ import './App.css';
 import Home from './Components/Home';
 import ReadingList from './Components/ReadingList';
 import About from './Components/About';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from 'react';
 
@@ -16,6 +18,10 @@ function App() {
     copy.push(article)
 
     setReadingList(copy)
+
+  }
+
+  const removeItem = () => {
     
   }
 
@@ -23,25 +29,9 @@ function App() {
   return (
     <div className="App">
 
-      <nav>
-        <ul>
-
-          <Link to='/'>
-          <li>Home</li>
-          </Link>
-
-          <Link to='/readinglist'>
-          <li>Reading List</li>
-          </Link>
-
-          <Link to='/about'>
-          <li>About</li>
-          </Link>
-
-        </ul>
-      </nav>
-
-
+      <>
+      <Header/>
+      </>
 
 
       <main>
@@ -52,6 +42,13 @@ function App() {
         </Routes>
 
       </main>
+
+
+      <>
+      <Footer/>
+      </>
+
+
     </div>
   );
 }

@@ -5,7 +5,9 @@ const ReadingList = (props) => {
         return(
             <>
             <li>{item.title}</li>
+            <br />
             <li>{item.url}</li>
+            <button>Remove</button>
             </>
         )
     })
