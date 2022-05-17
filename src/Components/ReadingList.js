@@ -1,13 +1,13 @@
 
 const ReadingList = (props) => {
 
-    const listItemArr = props.readingList.map((item)=>{
+    const listItemArr = props.readingList.map((item,index)=>{
         return(
             <>
             <li>{item.title}</li>
             <br />
             <li>{item.url}</li>
-            <button>Remove</button>
+            <button onClick={()=>props.removeItem(index)}>Remove</button>
             </>
         )
     })

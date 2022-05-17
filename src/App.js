@@ -21,8 +21,13 @@ function App() {
 
   }
 
-  const removeItem = () => {
-    
+  const removeItem = (articleId) => {
+
+      let filterArr = readingList.filter((item, index)=>{
+        return(index !== articleId)
+      })
+
+      setReadingList(filterArr)
   }
 
 
@@ -37,7 +42,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home  addNewListItem={addNewListItem}/>} />
-          <Route path='/readinglist' element={<ReadingList readingList={readingList}/>} />
+          <Route path='/readinglist' element={<ReadingList removeItem={removeItem} readingList={readingList}/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
 
