@@ -16,8 +16,7 @@ function App() {
     copy.push(article)
 
     setReadingList(copy)
-
-
+    
   }
 
 
