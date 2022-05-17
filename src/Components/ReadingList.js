@@ -1,8 +1,9 @@
 
-
-const ReadingList = () => {
+const ReadingList = (props) => {
     return(
+        
         <h1>Reading List</h1>
+
     )
 }
 

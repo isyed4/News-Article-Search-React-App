@@ -26,7 +26,6 @@ const Home = (props) => {
 
     }
 
-   
 
     const articleArr = articles.map((item)=>{
         return(
@@ -37,7 +36,7 @@ const Home = (props) => {
             <li>{item.description}</li>
             <li>{item.url}</li>
             <br />
-            <button onClick={()=> props.addNewListItem(articles)}>Add to List</button>
+            <button onClick={()=> props.addNewListItem(item)}>Add to List</button>
             </>
         )
     })
