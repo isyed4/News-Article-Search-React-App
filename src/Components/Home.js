@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
+
 
 const Home = (props) => {
 
@@ -30,13 +32,19 @@ const Home = (props) => {
     const articleArr = articles.map((item)=>{
         return(
             <>
-            <li>{item.title}</li>
+            <li>Title: {item.title}</li>
             <br />
             <img src={item.urlToImage} />
-            <li>{item.description}</li>
-            <li>{item.url}</li>
+            <br />
+            <br />
+            <li>Synopsis: {item.description}</li>
+            <br />
+            <a target="_blank" href={item.url}>Click Here for Article!</a>
+            <br />
             <br />
             <button onClick={()=> props.addNewListItem(item)}>Add to List</button>
+            <br />
+            <br />
             </>
         )
     })

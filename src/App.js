@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './Components/Home';
 import ReadingList from './Components/ReadingList';
 import About from './Components/About';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route,} from "react-router-dom";
 import { useState } from 'react';
 
 function App() {
