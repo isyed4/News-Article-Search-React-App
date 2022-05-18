@@ -33,12 +33,11 @@ function App() {
   return (
     <div className="App">
 
-      <>
+    
       <Header/>
-      </>
-
-
+      
       <main>
+      
         <Routes>
           <Route path='/' element={<Home  addNewListItem={addNewListItem}/>} />
           <Route path='/readinglist' element={<ReadingList removeItem={removeItem} readingList={readingList}/>} />
@@ -47,11 +46,9 @@ function App() {
 
       </main>
 
-
-      <>
       <Footer/>
-      </>
 
+     
 
     </div>
   );

@@ -3,26 +3,26 @@ const ReadingList = (props) => {
 
     const listItemArr = props.readingList.map((item,index)=>{
         return(
-            <>
-            <li>Title: {item.title}</li>
+            <ul>
+            <li className="reading-list-title">{item.title}</li>
             <br />
-            <a target="_blank" href={item.url}>Click here for article!</a>
+            <a target="_blank" href={item.url}>Read Article Here</a>
             <br />
             <br />
             <button onClick={()=>props.removeItem(index)}>Remove</button>
-            </>
+            </ul>
         )
     })
 
     return(
-        <>
+    <div className='reading-list'>
 
         <h1>Reading List</h1>
-         <ul>
+         <div className='rendered-reading-list'>
             {listItemArr}
-         </ul>
+         </div>
 
-        </>
+    </div>
 
     )
 }

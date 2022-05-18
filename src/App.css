@@ -1,41 +1,108 @@
 .App {
   text-align: center;
+  /* background-image: url(images/newspaper.jpg);
+  background-size: cover;
+  background-position: center; */
 }
 
-nav{
+.header-nav {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  background: rgb(155, 155, 155);
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-nav ul li {
+  text-align: center;
+  margin-right: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.header-nav ul li:hover {
+  /* background-color: rgb(223, 223, 223); */
+  color: black;
+  text-decoration: underline;
+  /* border-radius: 1.1rem; */
+}
+
+.home .rendered-articles ul {
+  list-style: none;
+  background-color: rgb(206, 203, 203);
+  color: rgb(0, 0, 0);
+  padding-left: 0%;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.home .rendered-articles ul .title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.reading-list .rendered-reading-list ul {
+  list-style: none;
+  padding-left: 0%;
+  background-color: rgb(206, 203, 203);
+  color: rgb(0, 0, 0);
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.reading-list .rendered-reading-list ul .reading-list-title{
+  font-size: 1.5rem;
+}
+
+.footer .footer-nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: rgb(109, 109, 109);
-
+  background-color: rgb(155, 155, 155);
+  margin-top: 1.1rem;
 }
-
-nav ul{
+.footer .footer-nav ul {
   display: flex;
   list-style: none;
- 
+  padding-left: 0%;
 }
 
-nav ul li{
-  text-align: center;
-  margin-right: 2rem;
+.footer .footer-nav ul li {
   color: white;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer .footer-nav ul li a {
   font-size: 2rem;
+  color: black;
 }
 
-nav ul li:hover{
-  color: rgb(114, 139, 167);
+.footer .footer-nav ul li a:hover {
+  color:rgb(252, 252, 252)
 }
 
+.link-header {
+  text-decoration: none;
+}
 
-
-
-
-
-
-
+.about ul{
+  background-color: rgb(206, 203, 203);
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-top: 2.5rem;
+  margin-bottom:5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
 
 .App-link {
   color: #61dafb;
 }
-

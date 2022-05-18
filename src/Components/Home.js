@@ -26,26 +26,29 @@ const Home = (props) => {
         .then(response => response.json())
         .then(data => setArticles(data.articles))   
 
+        setSearchTopic('')
+        setSearchDate('')
+
     }
 
 
     const articleArr = articles.map((item)=>{
         return(
-            <>
-            <li>Title: {item.title}</li>
+        <ul>
+            <li className='title'>{item.title}</li>
             <br />
             <img src={item.urlToImage} />
             <br />
             <br />
-            <li>Synopsis: {item.description}</li>
+            <li className="synopsis">Synopsis: {item.description}</li>
             <br />
-            <a target="_blank" href={item.url}>Click Here for Article!</a>
-            <br />
-            <br />
-            <button onClick={()=> props.addNewListItem(item)}>Add to List</button>
+            <a target="_blank" href={item.url}>Read Article Here</a>
             <br />
             <br />
-            </>
+            <button onClick={()=> props.addNewListItem(item)}>Add to Reading List</button>
+            <br />
+            <br />
+        </ul>
         )
     })
 
@@ -54,22 +57,24 @@ const Home = (props) => {
 
     return(
 
-        <div>
+    <div className = 'home'>
+            
+        <h1>Search News Articles </h1>
 
         <form onSubmit={handleSubmit}>
-            <input onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="topic"/>
-            <input onChange={handleChangeDate}value={searchDate} type="text" placeholder="year-month-day"/>
+            <input onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="Topic"/>
+            <input onChange={handleChangeDate}value={searchDate} type="text" placeholder="yyyy-mm-dd"/>
             <input type="submit" value='Find Articles'/>
         </form>
 
-        <ul>
+        <div className='rendered-articles'>
             
            {articleArr}
 
 
-        </ul>
-
         </div>
+
+    </div>
     )
 }
 
