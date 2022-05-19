@@ -40,7 +40,7 @@ const Home = (props) => {
             <img className='article-image'src={item.urlToImage} />
             <br />
             <br />
-            <li className="synopsis">Synopsis: {item.description}</li>
+            <li className="synopsis">{item.description}</li>
             <br />
             <a target="_blank" href={item.url}>Read Article Here</a>
             <br />
