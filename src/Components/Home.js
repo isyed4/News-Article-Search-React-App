@@ -36,9 +36,9 @@ const Home = (props) => {
         return(
         <ul>
             <li className='title'>{item.title}</li>
-            <br />
+            {/* <br />
             <img src={item.urlToImage} />
-            <br />
+            <br /> */}
             <br />
             <li className="synopsis">Synopsis: {item.description}</li>
             <br />
@@ -62,9 +62,11 @@ const Home = (props) => {
         <h1>Search News Articles </h1>
 
         <form onSubmit={handleSubmit}>
-            <input onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="Topic"/>
-            <input onChange={handleChangeDate}value={searchDate} type="text" placeholder="yyyy-mm-dd"/>
-            <input type="submit" value='Find Articles'/>
+            <ul>
+                <input id='text-field'onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="Topic"/>
+                <input id='text-field'onChange={handleChangeDate}value={searchDate} type="text" placeholder="yyyy-mm-dd"/>
+                <input id='submit-button'type="submit" value='Find Articles'/>
+            </ul>
         </form>
 
         <div className='rendered-articles'>
