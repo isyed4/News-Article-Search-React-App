@@ -16,6 +16,7 @@
   display: flex;
   list-style: none;
   text-decoration: none;
+  flex-wrap: wrap;
 }
 
 .header-nav ul li {
@@ -40,11 +41,19 @@
   padding-left: 0%;
   margin-right: 5rem;
   margin-left: 5rem;
+  flex-wrap: wrap;
+  /* flex wrap here */
 }
 
 .home .rendered-articles ul .title {
   font-size: 3rem;
   font-weight: bold;
+}
+
+.home .rendered-articles ul .article-image{
+  width: 800x;
+  height: 600px;
+
 }
 
 .reading-list .rendered-reading-list ul {
@@ -54,6 +63,7 @@
   color: rgb(0, 0, 0);
   margin-right: 5rem;
   margin-left: 5rem;
+  flex-wrap:wrap;
 }
 
 .reading-list .rendered-reading-list ul .reading-list-title{
@@ -97,7 +107,13 @@
   text-decoration: none;
 }
 
-.about ul{
+.about .about-nav{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.about .about-nav ul{
   background-color: rgb(206, 203, 203);
   margin-left: 12rem;
   margin-right: 12rem;
@@ -106,6 +122,18 @@
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.about .about-nav ul li{
+  /* text-align: center; */
+
 }
 
 .home form #text-field {
@@ -147,12 +175,35 @@
 .home form ul{
   display: flex;
   padding-left: 0%;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* .home form ul input{
-  margin-right: 
-} */
+.home form ul li{
+  margin-right: 1.1rem;
+}
 
 .App-link {
   color: #61dafb;
 }
+
+
+
+@media(max-width: 550px){
+
+  .home .rendered-articles ul .article-image{
+    width: 195x;
+    height: 125px;
+  
+  }
+
+}
+
+
+/* @media(max-width: 1300px){
+  .home .rendered-articles ul .article-image{
+    width: 600x;
+    height: 300px;
+  }
+} */
