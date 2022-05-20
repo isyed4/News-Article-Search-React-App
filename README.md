@@ -3,7 +3,7 @@
 
 ## Motivation
 
-The motivation of this project was to give the user an easy experience to keep up with news of the topics they are intereseted in. 
+The motivation of this project was to give users an easy experience to find current news articles of topics they are interested in.
 
 ## Code style
 
@@ -37,4 +37,4 @@ fetch('https://newsapi.org/v2/everything?q={TOPIC}&from={DATE}&sortBy=popularity
 
 
 ## Credits
-  Shout out to Jennifer Susan for the advice and being an awesome TA!
+Shout out to Jennifer Susan for the advice and being an awesome TA!
