@@ -1,5 +1,5 @@
 ## Project title
- The Title of this Project is called 'Current News - Search Engine'.
+ The Title of this Project is called 'Current News - Search Engine'
 
 ## Motivation
 
