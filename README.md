@@ -1,8 +1,9 @@
 ## Project title
- The Title of this Project is called 'Current News Engine'.
+ The Title of this Project is called 'Current News - Search Engine'.
 
 ## Motivation
-The motivation of this project was to give the user an easy and fast experience to keep up with the current news of the topics they are personally intereseted in. 
+
+The motivation of this project was to give the user an easy experience to keep up with news of the topics they are intereseted in. 
 
 ## Code style
 
