@@ -27,7 +27,7 @@ Built with React.Js
 -Two search bars to find news articles by date and topic
 -Able to add specific articles to the 'Reading List'
 -Able to also remove specific articles from the Reading List
--Able to link to the article that opens up in another tab
+-Able to link to an article that opens up in another tab
 
 ## Code Example
 
