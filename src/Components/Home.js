@@ -5,44 +5,39 @@ import { useState } from "react";
 const Home = (props) => {
 
     const [searchTopic, setSearchTopic] = useState('')
-    const [searchDate, setSearchDate] = useState('')
     const [articles, setArticles] = useState([])
 
 
-    const apiKey = '56b24ea2ee9e4820a2454b3f6276cf33'
+    const apiKey = 'JfthfewNjCsIcdGTcJH7mdL8joHhIAVS'
 
     const handleChangeTopic = (event) =>{
         setSearchTopic(event.target.value)
     }
 
-    const handleChangeDate = (event) => {
-        setSearchDate(event.target.value)
-    }
+  
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        fetch(`https://newsapi.org/v2/everything?q=${searchTopic}&from=${searchDate}&sortBy=popularity&apiKey=${apiKey}`)
+        fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTopic}&api-key=${apiKey}`)
         .then(response => response.json())
-        .then(data => setArticles(data.articles))   
+        .then(data => setArticles(data.response.docs))   
 
         setSearchTopic('')
-        setSearchDate('')
-
+   
     }
 
 
     const articleArr = articles.map((item)=>{
         return(
         <ul>
-            <li className='title'>{item.title}</li>
+            <li className='title'>{item.headline.main}</li>
             <br />
-            <img className='article-image'src={item.urlToImage} />
+            <li className="synopsis">{item.abstract}</li>
             <br />
+            <li>Publish Date: {item.pub_date}</li>
             <br />
-            <li className="synopsis">{item.description}</li>
-            <br />
-            <a target="_blank" href={item.url}>Read Article Here</a>
+            <a target="_blank" href={item.web_url}>Read Article Here</a>
             <br />
             <br />
             <button onClick={()=> props.addNewListItem(item)}>Add to Reading List</button>
@@ -63,8 +58,7 @@ const Home = (props) => {
 
         <form onSubmit={handleSubmit}>
             <ul>
-                <li><input id='text-field'onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="Topic"/></li>
-                <li><input id='text-field'onChange={handleChangeDate}value={searchDate} type="text" placeholder="yyyy-mm-dd"/></li>
+                <li><input id='text-field'onChange ={handleChangeTopic}value ={searchTopic} type="text" placeholder="Enter Topic"/></li>
                 <li><input id='submit-button'type="submit" value='Find Articles'/></li>
             </ul>
         </form>

@@ -4,10 +4,9 @@ const ReadingList = (props) => {
     const listItemArr = props.readingList.map((item,index)=>{
         return(
             <ul>
-                <li className="reading-list-title">{item.title}</li>
+                <li className="reading-list-title">{item.headline.main}</li>
                 <br />
-                <a target="_blank" href={item.url}>Read Article Here</a>
-                <br />
+                <a target="_blank" href={item.web_url}>Read Article Here</a>
                 <br />
                 <button onClick={()=>props.removeItem(index)}>Remove</button>
             </ul>
