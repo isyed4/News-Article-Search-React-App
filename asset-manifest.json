@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ReactAppProject/static/css/main.f600ea62.css",
-    "main.js": "/ReactAppProject/static/js/main.fd6a4dd0.js",
-    "static/js/787.f6b2eaaf.chunk.js": "/ReactAppProject/static/js/787.f6b2eaaf.chunk.js",
-    "index.html": "/ReactAppProject/index.html",
-    "main.f600ea62.css.map": "/ReactAppProject/static/css/main.f600ea62.css.map",
-    "main.fd6a4dd0.js.map": "/ReactAppProject/static/js/main.fd6a4dd0.js.map",
-    "787.f6b2eaaf.chunk.js.map": "/ReactAppProject/static/js/787.f6b2eaaf.chunk.js.map"
+    "main.css": "/News-Article-Search-React-App/static/css/main.447c56bf.css",
+    "main.js": "/News-Article-Search-React-App/static/js/main.a083362f.js",
+    "static/js/787.f6b2eaaf.chunk.js": "/News-Article-Search-React-App/static/js/787.f6b2eaaf.chunk.js",
+    "index.html": "/News-Article-Search-React-App/index.html",
+    "main.447c56bf.css.map": "/News-Article-Search-React-App/static/css/main.447c56bf.css.map",
+    "main.a083362f.js.map": "/News-Article-Search-React-App/static/js/main.a083362f.js.map",
+    "787.f6b2eaaf.chunk.js.map": "/News-Article-Search-React-App/static/js/787.f6b2eaaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f600ea62.css",
-    "static/js/main.fd6a4dd0.js"
+    "static/css/main.447c56bf.css",
+    "static/js/main.a083362f.js"
   ]
 }
