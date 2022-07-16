@@ -223,9 +223,9 @@
   color: black;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 425px) {
   .home .rendered-articles ul .article-image {
-    width: 195x;
+    width: 195px;
     height: 125px;
   }
 
